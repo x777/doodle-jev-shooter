@@ -1,0 +1,39 @@
+:root {
+  --ink: #1c4f9a;
+  --ink-dark: #12356c;
+  --paper: #f6f1de;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  width: 100%; height: 100%; overflow: hidden;
+  background: #d9d0b8;
+  font-family: "Comic Sans MS", "Segoe Print", cursive, system-ui;
+}
+#c { display: block; width: 100%; height: 100%; background: var(--paper); cursor: crosshair; }
+#hud {
+  position: fixed; left: 18px; top: 12px; color: var(--ink-dark);
+  text-shadow: 0 1px 0 #fff7; pointer-events: none; font-size: 18px;
+}
+#hud .row { display: flex; gap: 18px; }
+#hud .dim { opacity: 0.75; font-size: 14px; margin-top: 4px; }
+#hud .log { margin-top: 8px; font-size: 13px; max-width: 460px; line-height: 1.35; }
+#overlay {
+  position: fixed; inset: 0; display: grid; place-items: center;
+  background: rgba(246, 241, 222, 0.84);
+}
+#overlay.hidden { display: none; }
+.paper {
+  width: min(540px, 92vw); background: var(--paper);
+  border: 2px solid var(--ink); padding: 28px 32px 24px;
+  box-shadow: 6px 8px 0 rgba(18, 53, 108, 0.18);
+  transform: rotate(-0.5deg);
+}
+.paper h1 { color: var(--ink-dark); font-size: 32px; margin-bottom: 8px; }
+.paper p, .paper li { color: var(--ink); margin: 8px 0; }
+.paper ul { padding-left: 18px; }
+.paper button {
+  margin-top: 12px; background: var(--ink); color: var(--paper);
+  border: 0; padding: 10px 22px; font: inherit; font-size: 20px; cursor: pointer;
+}
+.paper button:hover { background: var(--ink-dark); }
+.tiny { font-size: 12px; opacity: 0.7; }
