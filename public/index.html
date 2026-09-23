@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>doodle-jev-shooter</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="c" width="1280" height="720"></canvas>
+    <div id="hud">
+      <div id="top">
+        <span id="wave">WAVE 1</span>
+        <span id="score">0</span>
+        <span id="brain">HEURISTIC</span>
+      </div>
+      <div id="hpwrap"><div id="hp"></div></div>
+      <div id="log"></div>
+    </div>
+    <div id="overlay" class="show">
+      <div class="card">
+        <h1>DOODLE JEV SHOOTER</h1>
+        <p class="sub">paper arena · ink enemies · Jev picks the tactics</p>
+        <p class="how">WASD move · mouse aim · click / space shoot</p>
+        <p id="statusLine">checking Jev…</p>
+        <button id="startBtn" type="button">CLICK TO START</button>
+      </div>
+    </div>
+  </div>
+  <script src="./game.js"></script>
+</body>
+</html>
